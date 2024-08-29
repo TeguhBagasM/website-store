@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import ModalProvider from "@/providers/modal-provider";
 import { ThemeProvider } from "@/providers/theme-provider";
+import { ToasterProvider } from "@/providers/toast-provider";
 
 const font = Urbanist({ subsets: ["latin"] });
 
@@ -20,11 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={font.className}>
+      <body className={`${font.className} flex flex-col min-h-screen`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <ModalProvider />
+          <ToasterProvider />
           <Navbar />
-          {children}
+          <main className="flex-grow">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

@@ -18,7 +18,7 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({ params }) => {
 
   const category = await getCategory(params.categoryId);
   return (
-    <div className="bg-white">
+    <div className="">
       <Container>
         <Banner data={category.banner} />
         <div className="px-4 sm:px-6 lg:px-8 pb-24">

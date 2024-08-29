@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 interface MainNavProps {
-  data: Category[]
+  data: Category[];
 }
 
 const MainNav: React.FC<MainNavProps> = ({ data }) => {
@@ -25,8 +25,8 @@ const MainNav: React.FC<MainNavProps> = ({ data }) => {
           key={route.href}
           href={route.href}
           className={cn(
-            "text-sm font-medium transition-colors hover:text-black",
-            route.active ? "text-black" : "text-neutral-500"
+            "text-sm font-medium transition-colors",
+            route.active ? "text-violet-400" : ""
           )}
         >
           {route.label}

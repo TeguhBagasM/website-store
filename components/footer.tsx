@@ -1,10 +1,8 @@
 const Footer = () => {
   return (
-    <footer className="bg-white border-t">
+    <footer className="border-t">
       <div className="mx-auto py-10">
-        <p className="text-center text-xs text-black">
-          &copy; 2024 ThievStore, Inc. All rights reserved
-        </p>
+        <p className="text-center text-xs">&copy; 2024 ThievStore, Inc. All rights reserved</p>
       </div>
     </footer>
   );
